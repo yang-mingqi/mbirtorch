@@ -25,7 +25,7 @@ def main(dataset_url="/depot/bouman/data/Translation/purdue_BGA_xrm.tgz", run_mb
     voxel_row_aspect = tct_model.get_params('voxel_row_aspect')
 
     # Set parameters for recon
-    tct_model.set_params(positivity_flag=True)
+    tct_model.set_params(positivity_flag=False)
     tct_model.set_params(voxel_row_aspect=voxel_row_aspect / 2)
     tct_model.set_params(recon_shape=(recon_shape[0] * 2, 2900, 2500))
     tct_model.set_params(partition_sequence=[0, 2, 4, 6])
